@@ -1,5 +1,5 @@
 """
-PaperLens — Streamlit UI.
+ResearchPilot — Streamlit UI.
 
 Hybrid-retrieval RAG over your PDFs, with cross-encoder reranking,
 grounded citations, auto-summaries, and suggested follow-ups.
@@ -58,7 +58,7 @@ def _history_text(limit: int = 6) -> str:
 
 def _markdown_export() -> str:
     lines = [
-        "# PaperLens conversation",
+        "# ResearchPilot conversation",
         f"_Exported {datetime.now().strftime('%Y-%m-%d %H:%M')}_",
         "",
         f"**Documents:** {', '.join(st.session_state.ingested_files) or '(none)'}",
@@ -152,7 +152,7 @@ with st.sidebar:
     )
 
     if st.button(
-        "Process",
+        "Analyze PDFs",
         type="primary",
         use_container_width=True,
         disabled=(
@@ -194,7 +194,7 @@ with st.sidebar:
         st.download_button(
             "⬇️ Export chat (Markdown)",
             data=_markdown_export(),
-            file_name="paperlens_conversation.md",
+            file_name="researchpilot_conversation.md",
             mime="text/markdown",
             use_container_width=True,
             disabled=not st.session_state.messages,
