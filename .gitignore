@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# Secrets
+.streamlit/secrets.toml
+
+# Local documents and generated artifacts
+*.pdf
+exports/
+
+# Model and application caches
+.cache/
+huggingface_cache/
+.huggingface/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~

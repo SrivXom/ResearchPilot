@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 840" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+    <marker id="arrowQuery" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+    <style>
+      .box { stroke-width: 1.5; rx: 10; ry: 10; }
+      .title { font-size: 14px; font-weight: 600; text-anchor: middle; }
+      .sub { font-size: 11px; text-anchor: middle; }
+      .layer-label { font-size: 10px; font-weight: 600; fill: #94a3b8; letter-spacing: 1.2px; text-anchor: start; }
+      .flow { stroke: #64748b; stroke-width: 1.8; fill: none; marker-end: url(#arrow); }
+      .query-flow { stroke: #3b82f6; stroke-width: 1.8; fill: none; marker-end: url(#arrowQuery); }
+    </style>
+  </defs>
+
+  <text x="20" y="70"  class="layer-label">SOURCES</text>
+  <text x="20" y="160" class="layer-label">INGEST</text>
+  <text x="20" y="365" class="layer-label">INDEX</text>
+  <text x="20" y="500" class="layer-label">FUSE</text>
+  <text x="20" y="600" class="layer-label">RERANK</text>
+  <text x="20" y="695" class="layer-label">LLM</text>
+  <text x="20" y="785" class="layer-label">OUTPUT</text>
+
+  <rect x="380" y="40" width="240" height="55" class="box" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="500" y="63" class="title" fill="#14532d">PDFs Upload</text>
+  <text x="500" y="81" class="sub" fill="#475569">One or many · multi-page</text>
+
+  <rect x="380" y="130" width="240" height="50" class="box" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="500" y="152" class="title" fill="#14532d">Per-page Extractor</text>
+  <text x="500" y="169" class="sub" fill="#475569">pypdf · keeps page numbers</text>
+
+  <rect x="380" y="205" width="240" height="50" class="box" fill="#f0fdf4" stroke="#22c55e"/>
+  <text x="500" y="227" class="title" fill="#14532d">Recursive Chunker</text>
+  <text x="500" y="244" class="sub" fill="#475569">900 chars · 150 overlap</text>
+
+  <rect x="140" y="325" width="260" height="75" class="box" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="270" y="350" class="title" fill="#78350f">FAISS Vector Store</text>
+  <text x="270" y="368" class="sub" fill="#475569">Semantic similarity</text>
+  <text x="270" y="385" class="sub" fill="#475569">gemini-embedding-001</text>
+
+  <rect x="600" y="325" width="260" height="75" class="box" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="730" y="350" class="title" fill="#78350f">BM25 Index</text>
+  <text x="730" y="368" class="sub" fill="#475569">Keyword frequency</text>
+  <text x="730" y="385" class="sub" fill="#475569">Exact terms · acronyms</text>
+
+  <rect x="420" y="335" width="160" height="55" class="box" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="500" y="358" class="title" fill="#1e3a8a">User Query</text>
+  <text x="500" y="376" class="sub" fill="#475569">Per question</text>
+
+  <rect x="360" y="465" width="280" height="65" class="box" fill="#f5f3ff" stroke="#7c3aed"/>
+  <text x="500" y="491" class="title" fill="#4c1d95">Reciprocal Rank Fusion</text>
+  <text x="500" y="510" class="sub" fill="#475569">Merge two top-20 lists</text>
+  <text x="500" y="525" class="sub" fill="#475569">Score-free · robust</text>
+
+  <rect x="360" y="565" width="280" height="65" class="box" fill="#fdf2f8" stroke="#db2777"/>
+  <text x="500" y="591" class="title" fill="#831843">Cross-encoder Reranker</text>
+  <text x="500" y="610" class="sub" fill="#475569">ms-marco-MiniLM-L-6</text>
+  <text x="500" y="625" class="sub" fill="#475569">Top 20 → Top 5</text>
+
+  <rect x="360" y="665" width="280" height="55" class="box" fill="#f8fafc" stroke="#64748b"/>
+  <text x="500" y="687" class="title" fill="#0f172a">Gemini 2.5 Flash</text>
+  <text x="500" y="705" class="sub" fill="#475569">Grounded · cite-aware prompting</text>
+
+  <rect x="340" y="755" width="320" height="60" class="box" fill="#ecfeff" stroke="#0891b2"/>
+  <text x="500" y="780" class="title" fill="#164e63">Answer + [N] Citations</text>
+  <text x="500" y="798" class="sub" fill="#475569">Source · page · excerpt · score</text>
+
+  <path class="flow" d="M 500 95 L 500 128"/>
+  <path class="flow" d="M 500 180 L 500 203"/>
+  <path class="flow" d="M 460 255 L 320 323"/>
+  <path class="flow" d="M 540 255 L 680 323"/>
+
+  <path class="query-flow" d="M 420 362 L 402 362"/>
+  <path class="query-flow" d="M 580 362 L 598 362"/>
+
+  <path class="flow" d="M 320 400 L 420 463"/>
+  <path class="flow" d="M 680 400 L 580 463"/>
+
+  <path class="flow" d="M 500 530 L 500 563"/>
+  <path class="flow" d="M 500 630 L 500 663"/>
+  <path class="flow" d="M 500 720 L 500 753"/>
+
+  <g transform="translate(770, 50)">
+    <rect x="0" y="0" width="210" height="72" fill="#ffffff" stroke="#cbd5e1" stroke-width="1" rx="6"/>
+    <text x="105" y="16" font-size="10" font-weight="600" fill="#475569" text-anchor="middle" letter-spacing="0.5">LEGEND</text>
+    <line x1="12" y1="32" x2="44" y2="32" stroke="#64748b" stroke-width="1.8" marker-end="url(#arrow)"/>
+    <text x="52" y="35" font-size="10" fill="#475569">Data flow (one-time)</text>
+    <line x1="12" y1="50" x2="44" y2="50" stroke="#3b82f6" stroke-width="1.8" marker-end="url(#arrowQuery)"/>
+    <text x="52" y="53" font-size="10" fill="#475569">Query flow (per request)</text>
+    <text x="12" y="67" font-size="9" fill="#94a3b8" font-style="italic">PaperLens · Hybrid RAG</text>
+  </g>
+</svg>

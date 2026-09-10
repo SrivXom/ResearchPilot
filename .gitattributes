@@ -1,0 +1,13 @@
+# Vendor / generated / binary files ? exclude from language detection
+*.ps1 linguist-vendored
+*.bat linguist-vendored
+*.exe binary
+*.dll binary
+*.so binary
+myenv/* linguist-vendored
+venv/* linguist-vendored
+__pycache__/* linguist-vendored
+*.cfg linguist-vendored
+
+# Force-detect as Python (the actual primary language)
+*.py linguist-detectable=true
