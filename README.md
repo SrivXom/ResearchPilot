@@ -1,14 +1,14 @@
-# PaperLens
+# ResearchPilot
 
-[![Tests](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml/badge.svg)](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://vishwas-paperlens-chat-with-pdf.streamlit.app)
+<!-- [![Tests](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml/badge.svg)](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://vishwas-paperlens-chat-with-pdf.streamlit.app) -->
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
 Question answering over PDFs using hybrid retrieval, cross-encoder reranking,
 and page-level citation markers.
 
-[Live demo](https://vishwas-paperlens-chat-with-pdf.streamlit.app) |
-[Security notes](SECURITY.md)
+<!-- [Live demo](https://vishwas-paperlens-chat-with-pdf.streamlit.app) |
+[Security notes](SECURITY.md) -->
 
 ## What It Demonstrates
 
@@ -70,7 +70,7 @@ Current limits:
 Do not upload sensitive documents to the public demo. See
 [SECURITY.md](SECURITY.md).
 
-## Run Locally
+<!-- ## Run Locally
 
 Requirements:
 
@@ -88,7 +88,7 @@ streamlit run app.py
 ```
 
 Add the Gemini key to `.env`. Current Google AI Studio authorization keys use
-the `AQ.` prefix; older standard keys commonly use `AIza`.
+the `AQ.` prefix; older standard keys commonly use `AIza`. -->
 
 ## Tests
 
@@ -132,10 +132,10 @@ Hugging Face cross-encoders, and pypdf.
 - First cross-encoder load can be slow while model weights download
 - No published retrieval or faithfulness benchmark yet
 
-## Author
+<!-- ## Author
 
-Built by [Vishwas Prabhakara](https://github.com/VishwasPrabhakara), Project
-Assistant (AIML) at the Indian Institute of Science.
+Built by [Om Srivastava](https://github.com/O), Project
+Assistant (AIML) at the Indian Institute of Science. -->
 
 ## License
 
