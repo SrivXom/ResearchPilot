@@ -20,7 +20,7 @@ MAX_FILE_BYTES = 20 * 1024 * 1024
 load_dotenv()
 
 st.set_page_config(
-    page_title="PaperLens — Chat with your PDFs",
+    page_title="ResearchPilot — Chat with your PDFs",
     page_icon="📄",
     layout="wide",
 )
@@ -111,7 +111,7 @@ def _render_answer(answer: Answer, key_prefix: str) -> None:
 # ---------------------------------------------------------------------------
 
 with st.sidebar:
-    st.markdown("### 📄 PaperLens")
+    st.markdown("### 📄 ResearchPilot")
     st.caption("Hybrid retrieval + cross-encoder reranking + grounded citations.")
     st.divider()
 
@@ -207,7 +207,7 @@ with st.sidebar:
 # Main panel
 # ---------------------------------------------------------------------------
 
-st.markdown("## 📄 PaperLens")
+st.markdown("## 📄 ResearchPilot")
 st.caption(
     "Ask grounded, cited questions about your PDFs. "
     "Hybrid retrieval (semantic + BM25) → cross-encoder reranking → Gemini."
