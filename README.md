@@ -1,14 +1,11 @@
 # ResearchPilot
 
-<!-- [![Tests](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml/badge.svg)](https://github.com/VishwasPrabhakara/Chat_with_PDF/actions/workflows/tests.yml)
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit-FF4B4B?logo=streamlit&logoColor=white)](https://vishwas-paperlens-chat-with-pdf.streamlit.app) -->
+
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 
 Question answering over PDFs using hybrid retrieval, cross-encoder reranking,
 and page-level citation markers.
 
-<!-- [Live demo](https://vishwas-paperlens-chat-with-pdf.streamlit.app) |
-[Security notes](SECURITY.md) -->
 
 ## What It Demonstrates
 
@@ -23,7 +20,7 @@ and page-level citation markers.
 - Document summaries, follow-up suggestions, token accounting, and chat export
 - Offline unit tests and GitHub Actions CI
 
-PaperLens is a portfolio RAG application, not a production document-management
+ResearchPilot is a portfolio RAG application, not a production document-management
 or factual-verification system.
 
 ## Architecture
@@ -46,7 +43,7 @@ PDFs
 ## Citation Boundary
 
 Each context chunk receives a marker such as `[1]`. The answer prompt requires
-Gemini to cite those markers inline. PaperLens now displays only valid markers
+Gemini to cite those markers inline. ResearchPilot now displays only valid markers
 that actually appear in the generated answer, preserving their original page
 and source mapping.
 
